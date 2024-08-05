@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+model User {
+  id    Int     @default(autoincrement()) @id
+  email String  @unique
+  pw    String
+  name  String
+  uuid String @unique
+  nickname String @unique
+  status Boolean
+  role Role
+}
+
+model Board {
+  id         Int         @id @default(autoincrement())
+  name       String
+
+  posts      Post[]      // 1:N 관계를 나타내는 필드
+  boardRoles BoardRole[] // 1:N 관계를 나타내는 필드
+}
+
+model Post {
+  id         Int         @id @default(autoincrement())
+  uuid       String      
+  title      String
+  content    String?
+  updatedAt  DateTime    @updatedAt
+  createdAt  DateTime    @default(now())
+  
+  boardId    Int         // 외래 키 필드
+  board      Board       @relation(fields: [boardId], references: [id])
+}
+
+model BoardRole {
+  id         Int         @id @default(autoincrement())
+  uuid       String      
+
+  boardId    Int         // 외래 키 필드
+  board      Board       @relation(fields: [boardId], references: [id])
+}
