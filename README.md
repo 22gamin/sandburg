@@ -23,3 +23,10 @@
 
 ### API 명세서 <br>
 https://lively-garment-d2e.notion.site/API-be22abb3db7c40969680713a04d23288?pvs=4
+
+<br>
+
+![image](https://github.com/user-attachments/assets/97e2284f-7029-4d87-ac2a-71dcf5bcceff)
+![image](https://github.com/user-attachments/assets/ebda3819-4db9-4e9a-85c0-ae5b7a261a5a)
+
+
