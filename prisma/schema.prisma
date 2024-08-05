@@ -23,7 +23,7 @@ model User {
   email String  @unique
   pw    String
   name  String
-  uuid String
+  uuid String @unique
   nickname String @unique
   status Boolean
   role Role
@@ -39,7 +39,7 @@ model Board {
 
 model Post {
   id         Int         @id @default(autoincrement())
-  uuid       String      @unique
+  uuid       String      
   title      String
   content    String?
   updatedAt  DateTime    @updatedAt
@@ -51,7 +51,7 @@ model Post {
 
 model BoardRole {
   id         Int         @id @default(autoincrement())
-  uuid       String      @unique
+  uuid       String      
 
   boardId    Int         // 외래 키 필드
   board      Board       @relation(fields: [boardId], references: [id])
