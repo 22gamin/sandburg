@@ -1,3 +1,9 @@
+# Sandburg 백엔드 개발자 과제 <br>
+<br>
+
+### 지원자 김가민
+
+<br>
 
 ### 📢 프로젝트 소개
 
@@ -7,17 +13,13 @@
 - swagger 적용  <br>
 
 <br>
-<br>
-<br>
-<br>
+
+
+### ERD
 <img src="https://github.com/user-attachments/assets/7fee8d86-c6ad-4486-b70e-fed7e6f8d616" width="500" height="300"/>
 
-![ERD](https://github.com/user-attachments/assets/7fee8d86-c6ad-4486-b70e-fed7e6f8d616)
 
 
-Sandburg 백엔드 개발자 과제
-김가민
 
-
-API 명세서
+### API 명세서 <br>
 https://lively-garment-d2e.notion.site/API-be22abb3db7c40969680713a04d23288?pvs=4
